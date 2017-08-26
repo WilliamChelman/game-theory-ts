@@ -7,10 +7,10 @@ cache:
     - "node_modules"
 dist: trusty
 script:
-  - sudo $(which npm) test
+  - sudo $(type -P npm) test
 # Send coverage data to Coveralls
 after_script:
-  - sudo $(which npm) run coverage
+  - sudo $(type -P npm) run coverage
 #  - npm run build -- --prod
 #before_install:
 #- google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost
