@@ -3,7 +3,7 @@ import { assert } from "chai";
 import { AlwaysBetrayPlayer } from "./AlwaysBetrayPlayer";
 
 describe("AlwaysBetrayPlayer", () => {
-  it("should always cooperate", () => {
+  it("should always betray", () => {
     const player = new AlwaysBetrayPlayer();
     assert.equal(player.play(1), Decision.BETRAY);
   });
