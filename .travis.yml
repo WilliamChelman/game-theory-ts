@@ -5,12 +5,12 @@ node_js:
 cache:
   directories:
     - "node_modules"
-dist: precise
+dist: trusty
 script:
-  - npm run test
+  - sudo $(which npm) test
 # Send coverage data to Coveralls
 after_script:
-  - npm run coverage
+  - sudo $(which npm) run coverage
 #  - npm run build -- --prod
 #before_install:
 #- google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost
