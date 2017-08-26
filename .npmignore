@@ -1,0 +1,4 @@
+**/*.spec.*
+node_modules
+.vscode/
+.idea/
