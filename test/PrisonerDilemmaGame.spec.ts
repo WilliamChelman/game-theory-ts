@@ -1,10 +1,10 @@
 import { expect } from "chai";
-import { utils } from "./utils";
-import { IPlayer } from "./player/IPlayer";
-import { AlwaysCooperatePlayer } from "./player/AlwaysCooperatePlayer";
-import { Decision } from "./Decision";
-import { PrisonerDilemmaGame } from "./PrisonerDilemmaGame";
-import { AlwaysBetrayPlayer } from "./player/AlwaysBetrayPlayer";
+import { utils } from "../src/utils";
+import { IPlayer } from "../src/player/IPlayer";
+import { AlwaysCooperatePlayer } from "../src/player/AlwaysCooperatePlayer";
+import { Decision } from "../src/Decision";
+import { PrisonerDilemmaGame } from "../src/PrisonerDilemmaGame";
+import { AlwaysBetrayPlayer } from "../src/player/AlwaysBetrayPlayer";
 
 const payoffs = {
   [Decision.COOPERATE]: {

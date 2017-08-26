@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "prepublishOnly": "npm run build",
-    "test": "mocha --compilers ts:ts-node/register \"./src/**/*.spec.ts\"",
-    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec --compilers ts:ts-node/register \"./src/**/*.spec.ts\"",
+    "test": "mocha",
+    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",
     "build": "tsc",
     "precommit": "lint-staged",
     "publishNew": "npm publish --access=public",

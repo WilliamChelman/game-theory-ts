@@ -1,6 +1,6 @@
-import { Decision } from "../Decision";
+import { Decision } from "../../src/Decision";
 import { assert } from "chai";
-import { AlwaysBetrayPlayer } from "./AlwaysBetrayPlayer";
+import { AlwaysBetrayPlayer } from "../../src/player/AlwaysBetrayPlayer";
 
 describe("AlwaysBetrayPlayer", () => {
   it("should always betray", () => {
