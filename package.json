@@ -4,7 +4,7 @@
   "description": "Game theory library",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers ts:ts-node/register ./src/**/*.spec.ts",
+    "test": "mocha --compilers ts:ts-node/register \"./src/**/*.spec.ts\"",
     "precommit": "lint-staged"
   },
   "repository": {
