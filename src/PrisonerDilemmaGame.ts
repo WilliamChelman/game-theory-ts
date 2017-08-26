@@ -59,12 +59,12 @@ export class PrisonerDilemmaGame {
   }
 }
 
-type RoundResults = {
+export type RoundResults = {
   player1: PlayerResult;
   player2: PlayerResult;
 };
 
-type PlayerResult = {
+export type PlayerResult = {
   player: IPlayer;
   decision: Decision;
   payoff: number;

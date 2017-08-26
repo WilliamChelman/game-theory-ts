@@ -3,7 +3,7 @@ import { utils } from "./utils";
 import { IPlayer } from "./player/IPlayer";
 import { AlwaysCooperatePlayer } from "./player/AlwaysCooperatePlayer";
 import { Decision } from "./Decision";
-import { PrisonerDilemmaGame } from "./PrisonnerDilemmaGame";
+import { PrisonerDilemmaGame } from "./PrisonerDilemmaGame";
 import { AlwaysBetrayPlayer } from "./player/AlwaysBetrayPlayer";
 
 const payoffs = {
