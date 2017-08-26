@@ -1,6 +1,5 @@
 **/*.spec.*
 test
-node_modules
 .vscode/
 .idea/
 coverage
