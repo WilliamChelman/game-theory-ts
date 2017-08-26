@@ -3,3 +3,4 @@ test
 .vscode/
 .idea/
 coverage
+.nyc_output

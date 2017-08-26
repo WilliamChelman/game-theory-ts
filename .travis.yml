@@ -6,9 +6,10 @@ cache:
     - "node_modules"
 dist: trusty
 script:
-  - npm run cover
+  - npm run test
 # Send coverage data to Coveralls
-after_script: "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+after_script:
+  - npm run coverage
 #  - npm run build -- --prod
 #before_install:
 #- google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost
