@@ -46,15 +46,8 @@
       "git add"
     ]
   },
-  "config": {
-    "blanket": {
-      "pattern": [
-        ""
-      ],
-      "data-cover-never": [
-        "node_modules",
-        "tests"
-      ]
-    }
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false
   }
 }
