@@ -9,7 +9,9 @@
     "test": "mocha --compilers ts:ts-node/register \"./src/**/*.spec.ts\"",
     "cover": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec --compilers ts:ts-node/register \"./src/**/*.spec.ts\"",
     "build": "tsc",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "publishNew": "npm publish --access=public",
+    "versionNew": "npm version from-git --git-tag-version=false"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,7 @@
     "chai": "^4.1.1",
     "coveralls": "^2.13.1",
     "husky": "^0.14.3",
-    "istanbul": "^0.4.5",
+    "istanbul": "^1.1.0-alpha.1",
     "lint-staged": "^4.0.4",
     "mocha": "^3.5.0",
     "prettier": "^1.5.3",
