@@ -5,4 +5,4 @@ node_modules
 **/*.d.ts
 coverage
 .nyc_output
-.coveralls.yml
+\.coveralls.yml
