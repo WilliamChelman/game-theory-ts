@@ -1,5 +1,7 @@
 **/*.spec.*
-node_modules
+test
 .vscode/
 .idea/
 coverage
+.nyc_output
+\.coveralls.yml

@@ -1,0 +1,5 @@
+--compilers ts:ts-node/register
+--reporter spec
+--colors
+--sort
+./test/**/*.spec.ts

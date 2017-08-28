@@ -1,5 +1,5 @@
-import { Decision } from "../Decision";
-import { GrudgerPlayer } from "./GrudgerPlayer";
+import { Decision } from "../../src/Decision";
+import { GrudgerPlayer } from "../../src/player/GrudgerPlayer";
 import { playerTestUtils } from "./playerTestUtils";
 
 describe("GrudgerPlayer", () => {

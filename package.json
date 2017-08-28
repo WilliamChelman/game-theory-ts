@@ -1,13 +1,13 @@
 {
   "name": "@nephidream/game-theory-ts",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "description": "Game theory library",
   "main": "index.js",
   "scripts": {
-    "prepublishOnly": "npm run build",
-    "test": "mocha --compilers ts:ts-node/register \"./src/**/*.spec.ts\"",
-    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec --compilers ts:ts-node/register \"./src/**/*.spec.ts\"",
+    "prepublishOnly": "npm run test && npm run cover && npm run build",
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "build": "tsc",
     "precommit": "lint-staged"
   },
@@ -28,10 +28,10 @@
     "chai": "^4.1.1",
     "coveralls": "^2.13.1",
     "husky": "^0.14.3",
-    "istanbul": "^0.4.5",
     "lint-staged": "^4.0.4",
     "mocha": "^3.5.0",
-    "prettier": "^1.5.3",
+    "nyc": "^11.1.0",
+    "prettier": "^1.6.0",
     "ts-node": "^3.3.0",
     "tslib": "^1.7.1",
     "tslint": "^5.6.0",
@@ -43,5 +43,9 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false
   }
 }

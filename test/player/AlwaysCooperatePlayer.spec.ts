@@ -1,5 +1,5 @@
-import { Decision } from "../Decision";
-import { AlwaysCooperatePlayer } from "./AlwaysCooperatePlayer";
+import { Decision } from "../../src/Decision";
+import { AlwaysCooperatePlayer } from "../../src/player/AlwaysCooperatePlayer";
 import { assert } from "chai";
 
 describe("AlwaysCooperatePlayer", () => {

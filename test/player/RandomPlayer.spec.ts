@@ -1,6 +1,6 @@
-import { Decision } from "../Decision";
+import { Decision } from "../../src/Decision";
 import { assert } from "chai";
-import { RandomPlayer } from "./RandomPlayer";
+import { RandomPlayer } from "../../src/player/RandomPlayer";
 
 const testRandomPlayer = (
   probability: number,
