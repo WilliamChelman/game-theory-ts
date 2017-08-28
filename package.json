@@ -1,11 +1,11 @@
 {
   "name": "@nephidream/game-theory-ts",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": false,
   "description": "Game theory library",
   "main": "index.js",
   "scripts": {
-    "prepublishOnly": "npm run test && npm run cover && npm run build",
+    "prepublishOnly": "npm run test && npm run coverage && npm run build",
     "test": "nyc mocha",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "build": "tsc",
