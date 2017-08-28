@@ -1,6 +1,6 @@
 {
   "name": "@nephidream/game-theory-ts",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "description": "Game theory library",
   "main": "index.js",
@@ -9,9 +9,7 @@
     "test": "nyc mocha",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "build": "tsc",
-    "precommit": "lint-staged",
-    "publishNew": "npm publish --access=public",
-    "versionNew": "npm version from-git --git-tag-version=false"
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
