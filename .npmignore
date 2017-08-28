@@ -4,3 +4,4 @@ test
 .idea/
 coverage
 .nyc_output
+.coveralls.yml

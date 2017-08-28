@@ -21,8 +21,6 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: npm --version
-      - run: node --version
       - run: npm install
 
       - save_cache:
@@ -32,6 +30,3 @@ jobs:
 
       # run tests!
       - run: npm test
-      - run: touch $(node -e "const osHomedir = require('os-homedir');console.log(osHomedir());")/foo.txt
-      - run: ls -lah $(node -e "const osHomedir = require('os-homedir');console.log(osHomedir());")/foo.txt
-
