@@ -10,4 +10,6 @@ export abstract class AbstractPlayer implements IPlayer {
   public processResult(opponentId: number, opponentDecision: Decision): void {}
 
   public reset(): void {}
+
+  public abstract clone(): IPlayer;
 }

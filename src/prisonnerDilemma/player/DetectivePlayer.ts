@@ -5,6 +5,10 @@ import { IPlayer } from "./IPlayer";
 import { CopyCatPlayer } from "./CopyCatPlayer";
 
 export class DetectivePlayer extends AbstractPlayer {
+  clone(): DetectivePlayer {
+    return new DetectivePlayer();
+  }
+
   private round: number;
   private surrogatePlayer: IPlayer;
 

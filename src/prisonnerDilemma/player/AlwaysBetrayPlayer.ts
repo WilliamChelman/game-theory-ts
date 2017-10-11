@@ -5,4 +5,8 @@ export class AlwaysBetrayPlayer extends AbstractPlayer {
   public play(opponentId: number): Decision {
     return Decision.BETRAY;
   }
+
+  public clone(): AlwaysBetrayPlayer {
+    return new AlwaysBetrayPlayer();
+  }
 }

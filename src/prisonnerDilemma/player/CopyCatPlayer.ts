@@ -17,8 +17,12 @@ export class CopyCatPlayer extends AbstractPlayer {
     this.nextAction = opponentDecision;
   }
 
-  public reset(): void {
+  reset(): void {
     super.reset();
     this.nextAction = this.initialAction;
+  }
+
+  clone(): CopyCatPlayer {
+    return new CopyCatPlayer(this.initialAction);
   }
 }

@@ -6,4 +6,5 @@ export interface IPlayer {
   play(opponentId: number): Decision;
   processResult(opponentId: number, opponentDecision: Decision): void;
   reset(): void;
+  clone(): IPlayer;
 }

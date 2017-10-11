@@ -14,7 +14,10 @@ export class PrisonerDilemmaGame {
   }
 
   public init() {
-    this.players.forEach(player => (player.id = ++this.currentPlayerId));
+    this.players.forEach(player => {
+      player.id = ++this.currentPlayerId;
+      player.reset();
+    });
   }
 
   public *play() {
@@ -33,6 +36,22 @@ export class PrisonerDilemmaGame {
 
   public playToTheEnd(): Array<RoundResults> {
     return [...this.play()];
+  }
+
+  public adaptPopulation(numberToChange: number) {
+    const sortedPlayers = this.players.sort((a, b) => b.score - a.score);
+    // deleting #numberToChange worst players
+    const lastIndex = sortedPlayers.length - 1;
+    for (let i = lastIndex; i > lastIndex - numberToChange; --i) {
+      let deleteIndex = this.players.indexOf(sortedPlayers[i]);
+      this.players.splice(deleteIndex, 1);
+    }
+    // reproducing #numberToChange best players
+    for (let i = 0; i < numberToChange; ++i) {
+      this.players.push(sortedPlayers[i].clone());
+    }
+
+    this.init();
   }
 
   private playRound(player1: IPlayer, player2: IPlayer): RoundResults {

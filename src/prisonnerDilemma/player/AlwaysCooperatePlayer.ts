@@ -5,4 +5,8 @@ export class AlwaysCooperatePlayer extends AbstractPlayer {
   public play(opponentId: number): Decision {
     return Decision.COOPERATE;
   }
+
+  public clone(): AlwaysCooperatePlayer {
+    return new AlwaysCooperatePlayer();
+  }
 }

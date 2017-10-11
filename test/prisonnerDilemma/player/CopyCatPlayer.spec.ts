@@ -1,6 +1,6 @@
-import { Decision } from "../../src/Decision";
+import { Decision } from "../../../src/prisonnerDilemma/Decision";
 import { assert } from "chai";
-import { CopyCatPlayer } from "../../src/player/CopyCatPlayer";
+import { CopyCatPlayer } from "../../../src/prisonnerDilemma/player/CopyCatPlayer";
 
 describe("CopyCatPlayer", () => {
   it("should always mirror the opponent's action", () => {

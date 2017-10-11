@@ -2,7 +2,11 @@ import { Decision } from "../Decision";
 import { AbstractPlayer } from "./AbstractPlayer";
 
 export class RandomPlayer extends AbstractPlayer {
-  constructor(private chanceOfCooperation: number = 0.5) {
+  clone(): RandomPlayer {
+    return new RandomPlayer(this.chanceOfCooperation);
+  }
+
+  constructor(private chanceOfCooperation: number) {
     super();
   }
 

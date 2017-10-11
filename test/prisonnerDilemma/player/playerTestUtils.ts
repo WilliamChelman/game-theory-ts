@@ -1,5 +1,5 @@
-import { IPlayer } from "../../src/player/IPlayer";
-import { Decision } from "../../src/Decision";
+import { IPlayer } from "../../../src/prisonnerDilemma/player/IPlayer";
+import { Decision } from "../../../src/prisonnerDilemma/Decision";
 import { expect } from "chai";
 
 export namespace playerTestUtils {

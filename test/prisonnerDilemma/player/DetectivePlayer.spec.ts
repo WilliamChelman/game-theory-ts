@@ -1,6 +1,6 @@
-import { Decision } from "../../src/Decision";
-import { DetectivePlayer } from "../../src/player/DetectivePlayer";
-import { utils } from "../../src/utils";
+import { Decision } from "../../../src/prisonnerDilemma/Decision";
+import { DetectivePlayer } from "../../../src/prisonnerDilemma/player/DetectivePlayer";
+import { utils } from "../../../src/prisonnerDilemma/utils";
 import { playerTestUtils } from "./playerTestUtils";
 
 describe("DetectivePlayer", () => {

@@ -2,6 +2,10 @@ import { AbstractPlayer } from "./AbstractPlayer";
 import { Decision } from "../Decision";
 
 export class GrudgerPlayer extends AbstractPlayer {
+  clone(): GrudgerPlayer {
+    return new GrudgerPlayer();
+  }
+
   private hasBeenBetrayedOnce: boolean = false;
 
   play(opponentId: number): Decision {

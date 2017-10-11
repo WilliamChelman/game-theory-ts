@@ -1,10 +1,10 @@
 import { expect } from "chai";
-import { utils } from "../src/utils";
-import { IPlayer } from "../src/player/IPlayer";
-import { AlwaysCooperatePlayer } from "../src/player/AlwaysCooperatePlayer";
-import { Decision } from "../src/Decision";
-import { PrisonerDilemmaGame } from "../src/PrisonerDilemmaGame";
-import { AlwaysBetrayPlayer } from "../src/player/AlwaysBetrayPlayer";
+import { utils } from "../../src/prisonnerDilemma/utils";
+import { IPlayer } from "../../src/prisonnerDilemma/player/IPlayer";
+import { AlwaysCooperatePlayer } from "../../src/prisonnerDilemma/player/AlwaysCooperatePlayer";
+import { Decision } from "../../src/prisonnerDilemma/Decision";
+import { PrisonerDilemmaGame } from "../../src/prisonnerDilemma/PrisonerDilemmaGame";
+import { AlwaysBetrayPlayer } from "../../src/prisonnerDilemma/player/AlwaysBetrayPlayer";
 
 const payoffs = {
   [Decision.COOPERATE]: {
@@ -77,5 +77,29 @@ describe("PrisonerDilemmaGame", () => {
         `Betray Player ${index} should have 150 points`
       ).to.equal(150)
     );
+  });
+
+  it("should adapt its population", () => {
+    const cooperatePlayers: Array<IPlayer> = [];
+    const betrayPlayers: Array<IPlayer> = [];
+    utils.doManyTimes(
+      () => cooperatePlayers.push(new AlwaysCooperatePlayer()),
+      10
+    );
+    utils.doManyTimes(() => betrayPlayers.push(new AlwaysBetrayPlayer()), 10);
+    cooperatePlayers.forEach(player => (player.score = 20));
+    betrayPlayers.forEach(player => (player.score = 10));
+    const players: Array<IPlayer> = [];
+    players.push(...cooperatePlayers, ...betrayPlayers);
+    const game = new PrisonerDilemmaGame(players, 10, payoffs);
+    game.adaptPopulation(5);
+    const cPlayers = players.filter(
+      player => player instanceof AlwaysCooperatePlayer
+    );
+    const bPlayers = players.filter(
+      player => player instanceof AlwaysBetrayPlayer
+    );
+    expect(cPlayers.length).to.equal(15);
+    expect(bPlayers.length).to.equal(5);
   });
 });
