@@ -1,3 +1,1 @@
-export {
-  PrisonerDilemmaGame
-} from "./src/prisonnerDilemma/PrisonerDilemmaGame";
+export * from "./src/prisonnerDilemma/index";
